@@ -35,13 +35,13 @@
                             {{ config('cart.currency') }}
                             @if(!is_null($product->attributes->where('default', 1)->first()))
                                 @if(!is_null($product->attributes->where('default', 1)->first()->sale_price))
-                                    {{ number_format($product->attributes->where('default', 1)->first()->sale_price, 2) }}
+                                    {{ round($product->attributes->where('default', 1)->first()->sale_price) }}
                                     <p class="text text-danger">Sale!</p>
                                 @else
-                                    {{ number_format($product->attributes->where('default', 1)->first()->price, 2) }}
+                                    {{ round($product->attributes->where('default', 1)->first()->price) }}
                                 @endif
                             @else
-                                {{ number_format($product->price, 2) }}
+                                {{ round($product->price) }}
                             @endif
                         </p>
                     </div>

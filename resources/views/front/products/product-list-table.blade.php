@@ -76,11 +76,11 @@
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                             <span class="hidden-lg hidden-md"><small>Price: </span>
-                                            {{config('cart.currency')}} {{ number_format($cartItem->price, 2) }}</small>
+                                            {{config('cart.currency')}} {{ number_format($cartItem->sale_price, 2) }}</small>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                             <span class="hidden-lg hidden-md"><small>Total: </span>
-                                            {{config('cart.currency')}} {{ number_format(($cartItem->qty*$cartItem->price), 2) }}</small>
+                                            {{config('cart.currency')}} {{ number_format(($cartItem->qty*$cartItem->sale_price), 2) }}</small>
                                         </div>
 
                                     </div>
